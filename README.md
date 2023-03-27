@@ -26,6 +26,7 @@ Há links específicos para cada commit de finalização de uma aula.
 | [aula-1-8](../../commit/c4e9cfc)  | Modelando o Domínio: Optional Parameters |
 | [aula-1-9](../../commit/7213383)  | Modelando o Domínio: Summary             |
 | [aula-1-12](../../commit/c797e97) | Modelando o Domínio: Exceptions          |
+| [aula-1-14](../../commit/7d33ed1) | Modelando o Domínio: Source Generators   |
 
 ## Autor
 
