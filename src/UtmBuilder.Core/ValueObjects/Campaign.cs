@@ -1,17 +1,32 @@
 namespace UtmBuilder.Core.ValueObjects;
 
-public class Campaign : ValueObject
+public sealed class Campaign : ValueObject
 {
-    public string Content { get; set; }
+    public Campaign(
+        string source,
+        string medium,
+        string name,
+        string? id = null,
+        string? term = null,
+        string? content = null)
+    {
+        Content = content;
+        Id = id;
+        Medium = medium;
+        Name = name;
+        Source = source;
+        Term = term;
+    }
 
-    public string Id { get; set; }
-    
-    public string Medium { get; set; }
+    public string? Content { get; }
 
-    public string Name { get; set; }
+    public string? Id { get; }
 
-    public string Source { get; set; }
+    public string Medium { get; }
 
-    public string Term { get; set; }
+    public string Name { get; }
 
+    public string Source { get; }
+
+    public string? Term { get; }
 }
