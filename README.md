@@ -20,11 +20,12 @@ Há links específicos para cada commit de finalização de uma aula.
 
 ### Lista de Aulas
 
-| Aulas                            | Descrição                                |
-| -------------------------------- | ---------------------------------------- |
-| [aula-1-7](../../commit/5d76479) | Modelando o Domínio: Private Set         |
-| [aula-1-8](../../commit/c4e9cfc) | Modelando o Domínio: Optional Parameters |
-| [aula-1-9](../../commit/7213383) | Modelando o Domínio: Summary             |
+| Aulas                             | Descrição                                |
+| --------------------------------- | ---------------------------------------- |
+| [aula-1-7](../../commit/5d76479)  | Modelando o Domínio: Private Set         |
+| [aula-1-8](../../commit/c4e9cfc)  | Modelando o Domínio: Optional Parameters |
+| [aula-1-9](../../commit/7213383)  | Modelando o Domínio: Summary             |
+| [aula-1-12](../../commit/c797e97) | Modelando o Domínio: Exceptions          |
 
 ## Autor
 
