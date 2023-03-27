@@ -17,7 +17,7 @@ public sealed class Utm
         Url = url;
         Campaign = campaign;
     }
-    
+
     /// <summary>
     /// Campaign Details
     /// </summary>

@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using UtmBuilder.Core.Exceptions;
 
 namespace UtmBuilder.Core.ValueObjects;
