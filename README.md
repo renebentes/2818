@@ -24,6 +24,7 @@ Há links específicos para cada commit de finalização de uma aula.
 | -------------------------------- | ---------------------------------------- |
 | [aula-1-7](../../commit/5d76479) | Modelando o Domínio: Private Set         |
 | [aula-1-8](../../commit/c4e9cfc) | Modelando o Domínio: Optional Parameters |
+| [aula-1-9](../../commit/7213383) | Modelando o Domínio: Summary             |
 
 ## Autor
 
