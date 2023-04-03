@@ -30,6 +30,7 @@ Há links específicos para cada commit de finalização de uma aula.
 | [aula-1-15](../../commit/e801338) | Modelando o Domínio: Finalizando o objeto de campanha |
 | [aula-1-18](../../commit/2914841) | Modelando o Domínio: Extendendo uma lista             |
 | [aula-1-20](../../commit/89d0bfa) | Modelando o Domínio: Implicit Operators               |
+| [aula-1-22](../../commit/9874014) | Modelando o Domínio: Convertendo a URL - Parte 2      |
 
 ## Autor
 
