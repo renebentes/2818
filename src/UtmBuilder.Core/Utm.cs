@@ -29,6 +29,18 @@ public sealed class Utm
     /// </summary>
     public Url Url { get; }
 
+    /// <summary>
+    /// Converts an <see cref="Utm"/> object to a string
+    /// </summary>
+    /// <param name="utm">The UTM object</param>
+    /// <returns>Returns a string converted</returns>
+    public static implicit operator string(Utm utm)
+        => utm.ToString();
+
+    /// <summary>
+    /// Returns a string to represents an <see cref="Utm"/> object
+    /// </summary>
+    /// <returns></returns>
     public override string ToString()
     {
         var segments = new List<string>();
