@@ -20,13 +20,14 @@ Há links específicos para cada commit de finalização de uma aula.
 
 ### Lista de Aulas
 
-| Aulas                             | Descrição                                |
-| --------------------------------- | ---------------------------------------- |
-| [aula-1-7](../../commit/5d76479)  | Modelando o Domínio: Private Set         |
-| [aula-1-8](../../commit/c4e9cfc)  | Modelando o Domínio: Optional Parameters |
-| [aula-1-9](../../commit/7213383)  | Modelando o Domínio: Summary             |
-| [aula-1-12](../../commit/c797e97) | Modelando o Domínio: Exceptions          |
-| [aula-1-14](../../commit/7d33ed1) | Modelando o Domínio: Source Generators   |
+| Aulas                             | Descrição                                             |
+| --------------------------------- | ----------------------------------------------------- |
+| [aula-1-7](../../commit/5d76479)  | Modelando o Domínio: Private Set                      |
+| [aula-1-8](../../commit/c4e9cfc)  | Modelando o Domínio: Optional Parameters              |
+| [aula-1-9](../../commit/7213383)  | Modelando o Domínio: Summary                          |
+| [aula-1-12](../../commit/c797e97) | Modelando o Domínio: Exceptions                       |
+| [aula-1-14](../../commit/7d33ed1) | Modelando o Domínio: Source Generators                |
+| [aula-1-15](../../commit/e801338) | Modelando o Domínio: Finalizando o objeto de campanha |
 
 ## Autor
 
