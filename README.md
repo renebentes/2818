@@ -29,6 +29,7 @@ Há links específicos para cada commit de finalização de uma aula.
 | [aula-1-14](../../commit/7d33ed1) | Modelando o Domínio: Source Generators                |
 | [aula-1-15](../../commit/e801338) | Modelando o Domínio: Finalizando o objeto de campanha |
 | [aula-1-18](../../commit/2914841) | Modelando o Domínio: Extendendo uma lista             |
+| [aula-1-20](../../commit/89d0bfa) | Modelando o Domínio: Implicit Operators               |
 
 ## Autor
 
