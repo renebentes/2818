@@ -404,3 +404,6 @@ FodyWeavers.xsd
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/**/.name
+.idea/**/indexLayout.xml
+.idea/**/vcs.xml
