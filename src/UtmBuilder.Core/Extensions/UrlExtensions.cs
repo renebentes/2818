@@ -22,7 +22,9 @@ public static class UrlExtensions
         var segments = url.Address.Split('?');
 
         if (segments.Length == 1)
+        {
             throw new InvalidUrlException("No segments were provided");
+        }
 
         var pairs = segments[1].Split('&');
         return Array.Find(pairs, pair => pair.StartsWith(key))?.Split('=')[1];

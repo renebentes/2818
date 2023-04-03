@@ -39,7 +39,7 @@ public sealed class Utm
     public static implicit operator Utm(string link)
     {
         Url url = link;
-        
+
         var medium = url.GetQueryString("utm_medium");
         var name = url.GetQueryString("utm_campaign");
         var source = url.GetQueryString("utm_source");
@@ -50,7 +50,9 @@ public sealed class Utm
         if (string.IsNullOrEmpty(medium) ||
             string.IsNullOrEmpty(name) ||
             string.IsNullOrEmpty(source))
+        {
             throw new InvalidUrlException("Undeclared UTM required parameters.");
+        }
 
         return new Utm(
                 new Url(url.RemoveQueryStrings()),

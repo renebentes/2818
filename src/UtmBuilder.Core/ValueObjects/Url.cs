@@ -27,7 +27,7 @@ public sealed class Url : ValueObject
     /// <returns>Returns an <see cref="Url"/> object</returns>
     public static implicit operator Url(string address)
         => new(address);
-    
+
     /// <summary>
     /// Converts an <paramref name="url"/> object to a website address
     /// </summary>
@@ -39,7 +39,7 @@ public sealed class Url : ValueObject
     /// <summary>
     /// Returns a website address that represents an <see cref="Url"/> object
     /// </summary>
-    /// <returns>Returns the website <see cref="Url.Address"/></returns>
-    public override string ToString() 
+    /// <returns>Returns the website <see cref="Address"/></returns>
+    public override string ToString()
         => Address;
 }

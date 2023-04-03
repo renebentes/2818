@@ -27,7 +27,7 @@ public sealed class Campaign : ValueObject
         Name = name;
         Source = source;
         Term = term;
-        
+
         InvalidCampaignException.ThrowIfNullOrEmpty(Source, "Source is invalid");
         InvalidCampaignException.ThrowIfNullOrEmpty(Medium, "Medium is invalid");
         InvalidCampaignException.ThrowIfNullOrEmpty(Name, "Name is invalid");
