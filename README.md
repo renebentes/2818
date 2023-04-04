@@ -31,7 +31,8 @@ Há links específicos para cada commit de finalização de uma aula.
 | [aula-1-18](../../commit/2914841)    | Modelando o Domínio: Extendendo uma lista             |
 | [aula-1-20](../../commit/89d0bfa)    | Modelando o Domínio: Implicit Operators               |
 | [aula-1-22](../../commit/9874014)    | Modelando o Domínio: Convertendo a URL - Parte 2      |
-| [aula-2-4-a-6](../../commit/b1aa8cf) | Testes de Unidade:                                    |
+| [aula-2-4-a-6](../../commit/b1aa8cf) | Testes de Unidade: Aulas 4 a 6                        |
+| [aula-2-7](../../commit/e3e68e6)     | Testes de Unidade: Testando o Campaign                |
 
 ## Autor
 
