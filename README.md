@@ -20,17 +20,18 @@ Há links específicos para cada commit de finalização de uma aula.
 
 ### Lista de Aulas
 
-| Aulas                             | Descrição                                             |
-| --------------------------------- | ----------------------------------------------------- |
-| [aula-1-7](../../commit/5d76479)  | Modelando o Domínio: Private Set                      |
-| [aula-1-8](../../commit/c4e9cfc)  | Modelando o Domínio: Optional Parameters              |
-| [aula-1-9](../../commit/7213383)  | Modelando o Domínio: Summary                          |
-| [aula-1-12](../../commit/c797e97) | Modelando o Domínio: Exceptions                       |
-| [aula-1-14](../../commit/7d33ed1) | Modelando o Domínio: Source Generators                |
-| [aula-1-15](../../commit/e801338) | Modelando o Domínio: Finalizando o objeto de campanha |
-| [aula-1-18](../../commit/2914841) | Modelando o Domínio: Extendendo uma lista             |
-| [aula-1-20](../../commit/89d0bfa) | Modelando o Domínio: Implicit Operators               |
-| [aula-1-22](../../commit/9874014) | Modelando o Domínio: Convertendo a URL - Parte 2      |
+| Aulas                                | Descrição                                             |
+| ------------------------------------ | ----------------------------------------------------- |
+| [aula-1-7](../../commit/5d76479)     | Modelando o Domínio: Private Set                      |
+| [aula-1-8](../../commit/c4e9cfc)     | Modelando o Domínio: Optional Parameters              |
+| [aula-1-9](../../commit/7213383)     | Modelando o Domínio: Summary                          |
+| [aula-1-12](../../commit/c797e97)    | Modelando o Domínio: Exceptions                       |
+| [aula-1-14](../../commit/7d33ed1)    | Modelando o Domínio: Source Generators                |
+| [aula-1-15](../../commit/e801338)    | Modelando o Domínio: Finalizando o objeto de campanha |
+| [aula-1-18](../../commit/2914841)    | Modelando o Domínio: Extendendo uma lista             |
+| [aula-1-20](../../commit/89d0bfa)    | Modelando o Domínio: Implicit Operators               |
+| [aula-1-22](../../commit/9874014)    | Modelando o Domínio: Convertendo a URL - Parte 2      |
+| [aula-2-4-a-6](../../commit/b1aa8cf) | Testes de Unidade:                                    |
 
 ## Autor
 
