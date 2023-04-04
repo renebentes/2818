@@ -16,7 +16,7 @@ public class UrlTests
     };
 
     [TestMethod]
-    public void ShouldReturnExceptionWhenInvalidUrl()
+    public void Constructor_ShouldReturnExceptionWhenInvalidUrl()
     {
         foreach (var address in _invalidUrls)
         {
@@ -25,12 +25,33 @@ public class UrlTests
     }
 
     [TestMethod]
-    public void ShouldReturnAddressWhenValidUrl()
+    public void ToString_ShouldReturnAddressProperty()
     {
         foreach (var address in _validUrls)
         {
             var url = new Url(address);
-            Assert.AreEqual(address, url.ToString());
+            Assert.AreEqual(url.Address, url.ToString());
+        }
+    }
+
+    [TestMethod]
+    public void ImplicitOperatorString_ShouldReturnAddressProperty()
+    {
+        foreach (var address in _validUrls)
+        {
+            var url = new Url(address);
+            string actual = url;
+            Assert.AreEqual(url.Address, actual);
+        }
+    }
+
+    [TestMethod]
+    public void ImplicitOperatorUrl_ShouldConvertToUrlObject()
+    {
+        foreach (var address in _validUrls)
+        {
+            Url url = address;
+            Assert.IsInstanceOfType(url, typeof(Url));
         }
     }
 }
