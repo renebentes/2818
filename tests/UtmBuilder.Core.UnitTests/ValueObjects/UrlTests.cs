@@ -1,3 +1,5 @@
+using UtmBuilder.Core.Extensions;
+
 namespace UtmBuilder.Core.UnitTests.ValueObjects;
 
 [TestClass]
@@ -25,23 +27,23 @@ public class UrlTests
     }
 
     [TestMethod]
-    public void ToString_ShouldReturnAddressProperty()
+    public void ToString_ShouldReturnBaseAddress()
     {
         foreach (var address in _validUrls)
         {
             var url = new Url(address);
-            Assert.AreEqual(url.Address, url.ToString());
+            Assert.AreEqual(url.Address.GetBaseAddress(), url.ToString());
         }
     }
 
     [TestMethod]
-    public void ImplicitOperatorString_ShouldReturnAddressProperty()
+    public void ImplicitOperatorString_ShouldBaseAddress()
     {
         foreach (var address in _validUrls)
         {
             var url = new Url(address);
             string actual = url;
-            Assert.AreEqual(url.Address, actual);
+            Assert.AreEqual(url.Address.GetBaseAddress(), actual);
         }
     }
 
