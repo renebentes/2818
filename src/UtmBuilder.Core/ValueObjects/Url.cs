@@ -1,4 +1,5 @@
 using UtmBuilder.Core.Exceptions;
+using UtmBuilder.Core.Extensions;
 
 namespace UtmBuilder.Core.ValueObjects;
 
@@ -10,9 +11,8 @@ public sealed class Url : ValueObject
     /// <param name="address">Address of URL (Website link)</param>
     public Url(string address)
     {
+        InvalidUrlException.ThrowIfInvalid(address);        
         Address = address;
-
-        InvalidUrlException.ThrowIfInvalid(Address);
     }
 
     /// <summary>
@@ -41,5 +41,5 @@ public sealed class Url : ValueObject
     /// </summary>
     /// <returns>Returns the website <see cref="Address"/></returns>
     public override string ToString()
-        => Address;
+        => Address.GetBaseAddress();
 }

@@ -18,7 +18,8 @@ public partial class InvalidUrlException : Exception
     /// <param name="message">The message that describes the error.</param>
     public InvalidUrlException(string message = DefaultErrorMessage)
         : base(message)
-    { }
+    {
+    }
 
     /// <summary>
     /// Throws an <see cref="InvalidUrlException"/> if <paramref name="address"/> is null, empty or an invalid
@@ -34,12 +35,9 @@ public partial class InvalidUrlException : Exception
             throw new InvalidUrlException(message);
         }
 
-        if (!UrlRegex().IsMatch(address))
+        if (!RegexPatterns.UrlRegex().IsMatch(address))
         {
             throw new InvalidUrlException(message);
         }
     }
-
-    [GeneratedRegex(@"^(https?):\/\/((www.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}|localhost|(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))(:[0-9]{1,5})?((\/|\?).*)?$")]
-    private static partial Regex UrlRegex();
 }
