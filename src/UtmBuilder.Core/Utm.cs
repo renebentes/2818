@@ -39,13 +39,14 @@ public sealed class Utm
     public static implicit operator Utm(string link)
     {
         Url url = link;
+        var queryStrings = url.GetQueryStrings(out string address);
 
-        var medium = url.GetQueryString("utm_medium");
-        var name = url.GetQueryString("utm_campaign");
-        var source = url.GetQueryString("utm_source");
-        var id = url.GetQueryString("utm_id");
-        var content = url.GetQueryString("utm_content");
-        var term = url.GetQueryString("utm_term");
+        var medium = queryStrings["utm_medium"];
+        var name = queryStrings["utm_campaign"];
+        var source = queryStrings["utm_source"];
+        var id = queryStrings["utm_id"];
+        var content = queryStrings["utm_content"];
+        var term = queryStrings["utm_term"];
 
         if (string.IsNullOrEmpty(medium) ||
             string.IsNullOrEmpty(name) ||
@@ -55,12 +56,9 @@ public sealed class Utm
         }
 
         return new Utm(
-                new Url(url.RemoveQueryStrings()),
-                new Campaign(
-                    medium,
-                    name,
-                    source, id, content, term)
-            );
+            new Url(address),
+            new Campaign(source, medium, name, id, term, content)
+        );
     }
 
     /// <summary>
