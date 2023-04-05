@@ -9,7 +9,7 @@ public class CampaignTests
     [DataRow("", "medium", "name")]
     [DataRow("source", "", "name")]
     [DataRow("source", "medium", "")]
-    public void ShouldReturnExceptionWhenInvalidCampaign(string source, string medium, string name)
+    public void Constructor_ShouldReturnExceptionWhenInvalidCampaign(string source, string medium, string name)
         => Assert.ThrowsException<InvalidCampaignException>(() => new Campaign(source, medium, name));
 
     [TestMethod]
@@ -21,7 +21,7 @@ public class CampaignTests
     [DataRow("source", "medium", "name", "", "term", "")]
     [DataRow("source", "medium", "name", "", "", "content")]
     [DataRow("source", "medium", "name", "", "", "")]
-    public void ShouldNotReturnExceptionWhenValidCampaign(string source,
+    public void Constructor_ShouldNotReturnExceptionWhenValidCampaign(string source,
         string medium,
         string name,
         string id,
