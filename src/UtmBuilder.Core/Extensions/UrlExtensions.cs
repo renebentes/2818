@@ -12,13 +12,11 @@ public static class UrlExtensions
     /// Gets the query strings from <paramref name="url"/> address
     /// </summary>
     /// <param name="url">The <see cref="Url"/> object</param>
-    /// <param name="address">The address result</param>
     /// <returns>Returns a <see cref="Dictionary{TKey,TValue}"/> that represents query strings key-value pair</returns>
     /// <exception cref="InvalidUrlException"></exception>
-    public static Dictionary<string, string> GetQueryStrings(this Url url, out string address)
+    public static Dictionary<string, string> GetQueryStrings(this Url url)
     {
         var segments = url.Address.Split('?');
-        address = segments[0].EndsWith("/") ? segments[0] : $"{segments[0]}/";
 
         if (segments.Length == 1 || string.IsNullOrEmpty(segments[1]))
         {

@@ -39,7 +39,7 @@ public sealed class Utm
     public static implicit operator Utm(string link)
     {
         Url url = link;
-        var queryStrings = url.GetQueryStrings(out string address);
+        var queryStrings = url.GetQueryStrings();
 
         var medium = queryStrings["utm_medium"];
         var name = queryStrings["utm_campaign"];
@@ -56,7 +56,7 @@ public sealed class Utm
         }
 
         return new Utm(
-            new Url(address),
+            new Url(url),
             new Campaign(source, medium, name, id, term, content)
         );
     }
