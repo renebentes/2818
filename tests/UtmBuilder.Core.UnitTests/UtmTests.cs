@@ -23,4 +23,17 @@ public class UtmTests
         string actual = utm;
         Assert.AreEqual(Expected, actual);
     }
+
+    [TestMethod]
+    public void ImplicitOperatorUtm_ShouldReturnUtmFromUrl()
+    {
+        Utm utm = Expected;
+        Assert.AreEqual("https://balta.io/", utm.Url.Address);
+        Assert.AreEqual("src", utm.Campaign.Source);
+        Assert.AreEqual("med", utm.Campaign.Medium);
+        Assert.AreEqual("camp", utm.Campaign.Name);
+        Assert.AreEqual("id", utm.Campaign.Id);
+        Assert.AreEqual("term", utm.Campaign.Term);
+        Assert.AreEqual("cont", utm.Campaign.Content);
+    }
 }
