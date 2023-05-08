@@ -26,4 +26,19 @@ public static class UrlExtensions
         var pairs = segments[1].Split('&');
         return pairs.ToDictionary(pair => pair.Split('=')[0], pair => pair.Split('=')[1]);
     }
+
+    /// <summary>
+    /// Gets the base address (protocol and domain) for a <see cref="Url"/> objects.
+    /// </summary>
+    /// <example>For example:
+    /// <code>
+    ///     Url url = new Url("http://test.com/article.html?id=10");
+    ///     Console.WriteLine(url.GetBaseAddress();
+    /// </code>
+    /// Outputs only <c>http://test.com/</c>
+    /// </example>
+    /// <param name="url">An Url object</param>
+    /// <returns>The base address</returns>
+    public static string GetBaseAddress(this Url url)
+        => RegexPatterns.UrlRegex().Replace(url.Address, "${1}://${2}/");
 }

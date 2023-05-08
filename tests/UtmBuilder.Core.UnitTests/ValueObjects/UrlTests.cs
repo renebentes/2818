@@ -1,5 +1,3 @@
-using UtmBuilder.Core.Extensions;
-
 namespace UtmBuilder.Core.UnitTests.ValueObjects;
 
 [TestClass]
@@ -22,7 +20,7 @@ public class UrlTests
     {
         foreach (var address in _invalidUrls)
         {
-            Assert.ThrowsException<InvalidUrlException>(() => new Url(address));
+            _ = Assert.ThrowsException<InvalidUrlException>(() => new Url(address));
         }
     }
 
@@ -32,7 +30,7 @@ public class UrlTests
         foreach (var address in _validUrls)
         {
             var url = new Url(address);
-            Assert.AreEqual(url.Address.GetBaseAddress(), url.ToString());
+            Assert.AreEqual(url.Address, url.ToString());
         }
     }
 
@@ -43,7 +41,7 @@ public class UrlTests
         {
             var url = new Url(address);
             string actual = url;
-            Assert.AreEqual(url.Address.GetBaseAddress(), actual);
+            Assert.AreEqual(url.Address, actual);
         }
     }
 

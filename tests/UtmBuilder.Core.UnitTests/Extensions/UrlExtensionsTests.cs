@@ -32,7 +32,21 @@ public class UrlExtensionsTests
         foreach (var address in _urlsWithoutQueryStrings)
         {
             var url = new Url(address);
-            Assert.ThrowsException<InvalidUrlException>(() => url.GetQueryStrings());
+            _ = Assert.ThrowsException<InvalidUrlException>(url.GetQueryStrings);
         }
+    }
+
+    [TestMethod]
+    [DataRow("https://balta.io", "https://balta.io/")]
+    [DataRow("https://balta.io?id=id", "https://balta.io/")]
+    [DataRow("https://balta.io/?id=id", "https://balta.io/")]
+    [DataRow("https://balta.io/12564", "https://balta.io/")]
+    [DataRow("https://balta.io/cursos/dominios-ricos", "https://balta.io/")]
+    [DataRow("https://balta.io/artigos.html?id=10", "https://balta.io/")]
+    public void GetBaseAddress_ShouldReturnBaseAddressLink(string link, string expected)
+    {
+        var url = new Url(link);
+        var actual = url.GetBaseAddress();
+        Assert.AreEqual(expected, actual);
     }
 }
