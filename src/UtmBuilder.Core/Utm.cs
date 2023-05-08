@@ -41,12 +41,12 @@ public sealed class Utm
         Url url = link;
         var queryStrings = url.GetQueryStrings();
 
-        var medium = queryStrings["utm_medium"];
-        var name = queryStrings["utm_campaign"];
-        var source = queryStrings["utm_source"];
-        var id = queryStrings["utm_id"];
-        var content = queryStrings["utm_content"];
-        var term = queryStrings["utm_term"];
+        _ = queryStrings.TryGetValue("utm_medium", out var medium);
+        _ = queryStrings.TryGetValue("utm_campaign", out var name);
+        _ = queryStrings.TryGetValue("utm_source", out var source);
+        _ = queryStrings.TryGetValue("utm_id", out var id);
+        _ = queryStrings.TryGetValue("utm_content", out var content);
+        _ = queryStrings.TryGetValue("utm_term", out var term);
 
         if (string.IsNullOrEmpty(medium) ||
             string.IsNullOrEmpty(name) ||
