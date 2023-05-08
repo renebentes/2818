@@ -48,15 +48,12 @@ public sealed class Utm
         _ = queryStrings.TryGetValue("utm_content", out var content);
         _ = queryStrings.TryGetValue("utm_term", out var term);
 
-        if (string.IsNullOrEmpty(medium) ||
+        return string.IsNullOrEmpty(medium) ||
             string.IsNullOrEmpty(name) ||
-            string.IsNullOrEmpty(source))
-        {
-            throw new InvalidUrlException("Undeclared UTM required parameters.");
-        }
-
-        return new Utm(
-            new Url(url),
+            string.IsNullOrEmpty(source)
+            ? throw new InvalidUrlException("Undeclared UTM required parameters.")
+            : new Utm(
+            new Url(url.GetBaseAddress()),
             new Campaign(source, medium, name, id, term, content)
         );
     }
