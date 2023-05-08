@@ -6,8 +6,8 @@ public class UtmTests
     private const string Expected =
         "https://balta.io/?utm_source=src&utm_medium=med&utm_campaign=camp&utm_id=id&utm_term=term&utm_content=cont";
 
-    private readonly Url _url = new Url("https://balta.io");
-    private readonly Campaign _campaign = new Campaign("src", "med", "camp", "id", "term", "cont");
+    private readonly Url _url = new("https://balta.io/");
+    private readonly Campaign _campaign = new("src", "med", "camp", "id", "term", "cont");
 
     [TestMethod]
     public void ToString_ShouldReturnUrl()
@@ -36,4 +36,14 @@ public class UtmTests
         Assert.AreEqual("term", utm.Campaign.Term);
         Assert.AreEqual("cont", utm.Campaign.Content);
     }
+
+    [TestMethod]
+    [DataRow("", "med", "camp")]
+    [DataRow("src", "", "camp")]
+    [DataRow("src", "med", "")]
+    public void ImplicitOperatorUtm_ShouldReturnException_WhenBaseElementsFromCampaign(string source, string medium, string name)
+        => Assert.ThrowsException<InvalidUrlException>(() =>
+        {
+            Utm utm = $"{_url}?utm_medium={medium}&utm_campaign={name}&utm_source={source}";
+        });
 }
